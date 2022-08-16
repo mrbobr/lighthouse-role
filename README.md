@@ -17,6 +17,8 @@ lighthouse_git: https://github.com/VKCOM/lighthouse
 lh_home_dir: "/opt/lighthouse"
 #access log name
 lh_alog_name: lighthouse_access
+#default nginx user
+nginx_user: root
 ```
 
 Dependencies

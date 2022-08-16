@@ -13,6 +13,14 @@
     repo: "{{ lighthouse_git }}"
     version: master
     dest: "{{ lh_home_dir }}"
+- name: Config nginx
+  tags: nginx
+  become: true
+  ansible.builtin.template:
+    src: "{{ nginx_config_template }}"
+    dest: "{{ nginx_config_dest }}"
+    mode: 0644
+  notify: restart nginx
 - name: Config lighthouse
   tags: lighthouse
   become: true
